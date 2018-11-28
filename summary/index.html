@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+    <title>IDS - Soccer Analysis</title>
+
+    <style type="text/css">
+      .title-font {
+        font-family: Tahoma, Geneva, sans-serif;
+      }
+    </style>
+    <link rel="shortcut icon" href="../favicon.ico" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="../">
+          <strong>Soccer</strong>Analysis
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../goals">
+                Goals
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../about">
+                About
+              </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="../summary">
+                Summary
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                Analysis
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                Prediction
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="jumbotron jumbotron-fluid" style="background-image: url('../title-background.jpg');background-size: cover;">
+      <div class="container">
+        <h1 class="display-4 title-font text-light">Dataset Summary</h1>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <p>To further understand the dataset, we explored the data by visualizing some fields with Tableau. <strong>Figure 1</strong> shows the number of matches won by home team and away team. The statistics suggests that home team does have a higher probability of winning the match. This well explains why home team is more likely to be preferred by bookmakers, unless the strength gap between two teams is really huge.</p>
+        </div>
+        <div class="col-md-6">
+          <div class='tableauPlaceholder' id='viz1543375481903' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Do&#47;Doesthehometeamtendtowin&#47;Doeshometendtowin&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Doesthehometeamtendtowin&#47;Doeshometendtowin' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Do&#47;Doesthehometeamtendtowin&#47;Doeshometendtowin&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1543375481903');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+
+      <p style="margin-top: 3rem"><strong>Figure 2</strong> shows the total number of games won by each team participating in EPL (England Premier League) from 1993-1994 season to 2014-2015 season. Overall speaking, this chart shows whether a team can stay consistently competitive during the whole time lapse. For example, the four teams with most wins are exactly the ones traditionally considered as the most powerful teams in EPL during the past decades, with Manchester United, the one with most number of EPL champions, earning the highest number of wins. However, there are still drawbacks in this analysis. Teams not competitive anymore can still have a relatively high rank in this chart simply because they performed better in 1990s or 2000s, while teams newly promoted into EPL only has a limited number of total wins. In next step, we will try to analyze the statistics in a shorter time period (e.g. only using data in recent 10 years or less) to find a reasonable range of data to be used for building prediction model.</p>
+
+      <div class='tableauPlaceholder' id='viz1543376162844' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;To&#47;TotalWinsperTeam&#47;TotalWinsperTeam&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='TotalWinsperTeam&#47;TotalWinsperTeam' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;To&#47;TotalWinsperTeam&#47;TotalWinsperTeam&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1543376162844');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+  
+
+      <p style="margin-top: 3rem"><strong>Figure 3</strong> shows the average goals per game for each team. Intuitively, this chart shows how "aggressive" a team can be by their ability of scoring goals. By comparing this chart with the one above, we found that the most "aggressive" teams are also the ones performing best during those decades. The correlation might be more clear if the win rate is used in Figure 2 rather than total number of wins, and we will do deeper analysis in the second part of this project. Moreover, we observed that the average number of goals is less than expected, probably because only in recent years are the offensive strategy being so dominant. Hence we will analyze the data in different time intervals separately to have a better feeling on how the football strategy changed, to further giving more accurate predictions. Similar analysis will also be done on different fields, such as goal difference, shot attempts, shot on target and ball control rate.</p>
+
+      <div class='tableauPlaceholder' id='viz1543376304761' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Av&#47;AverageGoalsperTeam&#47;HomeTeamAverageGoals&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='AverageGoalsperTeam&#47;HomeTeamAverageGoals' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Av&#47;AverageGoalsperTeam&#47;HomeTeamAverageGoals&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1543376304761');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+      <hr/>
+    </div>
+
+    <footer class="container">
+      <p class="text-black-50">Lucen Zhao, Zhihao Zhou, Jiayuan Xu, Siang Gao @CMU, 2018</p>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  </body>
+</html>
