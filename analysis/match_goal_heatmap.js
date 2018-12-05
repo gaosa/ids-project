@@ -540,6 +540,7 @@ const match_goal_chart = Highcharts.chart('match_goal', {
             [0.8, '#c4463a']
         ],
         min: -10,
+        max: 10
         //minColor: '#FFFFFF',
         //maxColor: Highcharts.getOptions().colors[0]
     },
