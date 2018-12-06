@@ -293,22 +293,23 @@ const goal_num_config = {
         type: 'bar',
         label: 'Home Goal',
         data: goal_num_data['Liverpool'][0],
-        borderColor: 'black',
-        fill: false
+        backgroundColor: "#3282bf"
+        // borderColor: 'black',
+        // fill: false
         }, {
         type: 'bar',
         label: 'Away Goal',
-        backgroundColor: "red",
+        backgroundColor: "#92bed2",
         data: goal_num_data['Liverpool'][1],
         }, {
         type: 'bar',
         label: 'Home Lose',
-        backgroundColor: "blue",
+        backgroundColor: "#75539e",
         data: goal_num_data['Liverpool'][2]
         }, {
         type: 'bar',
         label: 'Away Lose',
-        backgroundColor: "pink",
+        backgroundColor: "#bba3d0",
         data: goal_num_data['Liverpool'][3]
         }]
     },

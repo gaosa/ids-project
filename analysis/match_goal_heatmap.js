@@ -516,7 +516,8 @@ const match_goal_chart = Highcharts.chart('match_goal', {
         type: 'heatmap',
         marginTop: 40,
         marginBottom: 80,
-        plotBorderWidth: 1
+        plotBorderWidth: 1,
+        backgroundColor:'rgba(255, 255, 255, 0.0)'
     },
     
     
@@ -546,12 +547,13 @@ const match_goal_chart = Highcharts.chart('match_goal', {
     },
     
     legend: {
-        align: 'right',
-        layout: 'vertical',
-        margin: 0,
-        verticalAlign: 'top',
-        y: 25,
-        symbolHeight: 280
+        enabled: false,
+        // align: 'right',
+        // layout: 'vertical',
+        // margin: 0,
+        // verticalAlign: 'top',
+        // y: 25,
+        // symbolHeight: 280
     },
     
     tooltip: {
@@ -569,7 +571,9 @@ const match_goal_chart = Highcharts.chart('match_goal', {
             enabled: true,
             color: '#000000'
         }
-    }]
+    }],
+
+    exporting: { enabled: false }
     
 });
 
@@ -583,9 +587,8 @@ function match_goal_select_handle() {
             arr.push([i, j, match_goal_dat[year][1][i][j]]);
         }
     }
-    console.log(arr);
-    match_goal_chart.xAxis[0].setCategories(teams, true);
-    match_goal_chart.yAxis[0].setCategories(teams, true);
-    match_goal_chart.series[0].setData(arr, true);
+    match_goal_chart.xAxis[0].setCategories(teams, false);
+    match_goal_chart.yAxis[0].setCategories(teams, false);
+    match_goal_chart.series[0].setData(arr, false);
     match_goal_chart.redraw();
 }
