@@ -356,7 +356,7 @@ const team_radar_chart = Highcharts.chart('team_radar', {
     },
 
     xAxis: {
-        categories: ['Goals Scored', 'Goals Lost', 'Shots', 'Fouls Commited',
+        categories: ['Goals', 'Goals Conceded', 'Shots', 'Fouls Commited',
             'Booking Score', 'Corners'],
         tickmarkPlacement: 'on',
         lineWidth: 0

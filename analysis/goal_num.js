@@ -291,24 +291,24 @@ const goal_num_config = {
         labels: goal_num_year,
         datasets: [{
         type: 'bar',
-        label: 'Home Goal',
+        label: 'Home Goals',
         data: goal_num_data['Liverpool'][0],
         backgroundColor: "#3282bf"
         // borderColor: 'black',
         // fill: false
         }, {
         type: 'bar',
-        label: 'Away Goal',
+        label: 'Away Goals',
         backgroundColor: "#92bed2",
         data: goal_num_data['Liverpool'][1],
         }, {
         type: 'bar',
-        label: 'Home Lose',
+        label: 'Home Goals Conceded',
         backgroundColor: "#75539e",
         data: goal_num_data['Liverpool'][2]
         }, {
         type: 'bar',
-        label: 'Away Lose',
+        label: 'Away Goals Conceded',
         backgroundColor: "#bba3d0",
         data: goal_num_data['Liverpool'][3]
         }]
